@@ -90,6 +90,9 @@ new
 30 goto 20
 ```
 
+### Gotchas
+- PLOT fails with *Illegal function call* if either coordinate is off screen. Drawing commands do not clip: clamp coordinates to 0-319 / 0-199 (low res) before plotting points of a shape that extends past an edge (a wrapped rock whose centre is on screen but whose vertices are not).
+
 ## POINT
 `c=POINT(x1,y1)` — Get the colour of a point.
 

@@ -434,6 +434,9 @@ SCANCODE is used in conjunction with INKEY$ to test whether the user has pressed
 
 Whenever you type a character on the ST's keyboard, its Ascii code is placed in an area of memory known as the keyboard buffer. It is this buffer that is read by the INKEY$ function. At the start of a program the buffer may well be full of unwanted information. It's therefore generally a good idea to remove all this garbage first using CLEAR KEY.
 
+### Gotchas
+- Buffered keypresses bleed across screens: the key that dismisses a menu, or a key held long enough for TOS auto-repeat, is still in the buffer on the next screen and can fire actions there (a menu SPACE instantly firing the ship's guns). CLEAR KEY after every keyboard wait or INPUT when changing game state.
+
 ### Example
 Add line 5 to the SCANCODE example above:
 ```stos

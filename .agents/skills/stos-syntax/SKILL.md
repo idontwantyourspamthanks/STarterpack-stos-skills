@@ -11,6 +11,19 @@ use it instead of memory or outside knowledge.
 
 ## Hard rules for generated code
 
+- **Variables are INTEGER by default** — fractional values are silently
+  truncated. Suffix with `#` for floats (`DX#`, `VEL#`) and `$` for strings.
+  Anything involving physics, trig tables, scaling or damping MUST use `#`
+  variables, including arrays (`dim DX#(15)`). This also applies to reading
+  fractional `data` into an array.
+- **PLOT/DRAW do not clip** — off-screen coordinates throw
+  *Illegal function call*. Clamp to 0-319 / 0-199 (MODE 0) before drawing
+  shapes that extend past a screen edge.
+- **Execution falls through line numbers** — never number a subroutine
+  between a loop body and its `NEXT`, and keep all subroutines behind an
+  `END` (or `GOTO`) so the main flow cannot fall into them.
+- **CLEAR KEY at every screen/state transition** — buffered keypresses
+  (menu dismissals, TOS auto-repeat) otherwise fire in the next context.
 - Plain ASCII only. No smart quotes, no Unicode, no UTF-8 BOM.
 - Every line must have a line number, flush at column 0 (no leading
   whitespace before the number). No blank lines.

@@ -2,6 +2,22 @@
 
 On loading STOS Basic you are presented with two windows: a thin strip across the top listing the current function-key assignments, and the larger editor window below it where you create and manipulate programs. The text cursor marks the position of the next character to be typed and also marks the current line, which is sent to the editor by pressing Return.
 
+## Variables and types
+
+Variables are **integer by default** — unlike most BASICs, STOS truncates fractional values unless you ask for a float. Three types:
+
+- `X` — integer (the default), range about ±2.1 billion, fastest.
+- `X#` — floating point; required for anything fractional (physics, trig tables, scaling factors, damping).
+- `X$` — string.
+
+Names may be up to 31 characters, must start with a letter, and must not CONTAIN the keywords `TO`, `STEP`, `THEN`, `ELSE`, `XOR`, `OR`, `AND`, `GOTO`, `GOSUB`, `MOD` or `AS`. Other keywords are allowed inside names.
+
+Gotcha: reading fractional DATA into an integer array truncates it — `read DX(D)` from `data 0.383` stores 0. Declare the array with `#` (`dim DX#(15)`).
+
+## Program structure
+
+Execution falls through line numbers: a subroutine placed between a loop body and its `NEXT` (or anywhere the main flow can reach) runs even without a `GOSUB`. Keep subroutines outside every `FOR...NEXT` / `WHILE...WEND` line range, and put an `END` or `GOTO` before the first subroutine so the main program cannot fall into it. A `RETURN` reached without a matching `GOSUB` pops the wrong frame off the stack and silently aborts the enclosing loop — a classic cause of "my game quits early" bugs.
+
 ## Editing lines
 
 As you type, characters appear under the cursor and the cursor advances. The arrow keys move the cursor within the current line, and clicking the left mouse button jumps the cursor to the pointer's position. Backspace deletes the character to the left of the cursor; Delete deletes the character under the cursor; Shift+Delete erases the entire line under the cursor; Control+J joins two lines into one.
