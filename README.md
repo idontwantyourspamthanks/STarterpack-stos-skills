@@ -5,15 +5,15 @@ for the Atari ST. Edit plain-text `.bas` files in VS Code, press
 `Ctrl+Shift+B`, and your program boots into STOS in the Hatari emulator ready
 to `run`.
 
-It also ships four AI-agent skills (in `.agents/skills/`) that give an AI
-assistant deep, verified knowledge of STOS Basic and the two most popular
+It also ships five AI-agent skills (in `.agents/skills/`) that give an AI
+assistant deep, verified knowledge of STOS Basic and the most popular
 extensions — handy whether or not you code with an AI.
 
 ## What's in the box
 
 ```
 .vscode/          tasks: Ctrl+Shift+B = sync + launch
-.agents/skills/   stos-syntax, stos-workflow, stos-missing-link, stos-misty
+.agents/skills/   stos-syntax, stos-workflow, stos-missing-link, stos-misty, stos-control
 scripts/          setup.sh, sync.sh, hatari.sh
 src/hello.bas     starter program
 examples/         a bigger example
@@ -102,6 +102,9 @@ If you use an AI coding assistant that discovers `.agents/skills/`:
   is installed.
 - **stos-misty** — the Misty extension (21 commands), from the official v1.7
   manual. Gated the same way.
+- **stos-control** — the Control extension (56 commands): the SWITCH/CASE
+  construct, parallel/Jaguar pad input, megazones, pre-shifted graphics, and
+  scrolling tile maps. From the official V3.6b manual, gated the same way.
 
 The reference material in these skills was distilled from the STOS manual and
 the extensions' official documentation. Verbatim source documents are not
