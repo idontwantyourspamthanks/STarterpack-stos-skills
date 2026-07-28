@@ -67,6 +67,9 @@ use it instead of memory or outside knowledge.
   stos-missing-link skill.
 - The Misty extension (SKOPY, FASTCOPY, DOT, COL, MOUSEOFF...): if - and only
   if - the user has that extension installed, see the stos-misty skill.
+- The Control extension (SWITCH/CASE, IMAGE PUT, megazones, tile maps...):
+  if - and only if - the user has that extension installed, see the
+  stos-control skill.
 
 ## Verified starter snippet
 

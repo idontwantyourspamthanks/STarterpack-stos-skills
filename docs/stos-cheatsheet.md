@@ -73,3 +73,32 @@ It **warns** (does not fail) on a line that has no leading line number.
 70 centre "Low resolution"
 80 wait key
 ```
+
+## Turning a Degas PI1 picture into sprites
+
+STOS loads Degas low-res pictures natively, so a PI1 can become a sprite bank
+with no external format knowledge. The in-STOS recipe (uses a seeded bank 1,
+because `GET SPRITE` needs an existing image of the target size):
+
+```
+10 mode 0 : hide : flash off
+20 load "seed.mbk"              : rem bank 1 with a placeholder of the right size
+30 reserve as screen 5
+40 load "art.pi1",5             : rem picture into screen bank 5
+50 screen copy 5 to logic
+60 get sprite 0,0,1             : rem grab screen rect into image 1 (mask colour defaults to 0)
+70 save "sprite.mbk",1
+```
+
+For batch use, `tools/pi1-to-sprite.py` does the whole job host-side - slices a
+PI1 into a regular grid and writes a `.MBK` directly, no STOS session needed:
+
+```
+python3 tools/pi1-to-sprite.py art.pi1 -o sprites.mbk \
+    --cell-w 16 --cell-h 16 --cols 20 --rows 12 --mask 0
+```
+
+`--cell-w` must be a multiple of 16 (the ST's strip width); `--mask` is the
+colour index treated as transparent (default 0). Run `--selftest` to confirm
+the binary format round-trips byte-identically against the sample banks. The
+on-disc layout is documented in `docs/stos-sprite-bank-format.md`.

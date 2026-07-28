@@ -43,4 +43,5 @@ bundled reference.
   content.
 - Source discrepancies and manual typos: `reference/errata.md`.
 - Vanilla STOS commands: the stos-syntax skill. The Missing Link extension:
-  the stos-missing-link skill.
+  the stos-missing-link skill. The Control extension: if - and only if -
+  that extension is installed, the stos-control skill.

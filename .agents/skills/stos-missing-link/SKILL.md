@@ -43,4 +43,5 @@ The extension ships in this repo: `extensions/misslink/Extensions/Stos/`
 - Source discrepancies: `reference/errata.md`.
 - Vanilla STOS commands: the stos-syntax skill. The Misty extension (SKOPY,
   FASTCOPY...): if - and only if - that extension is installed, the
-  stos-misty skill.
+  stos-misty skill. The Control extension: if - and only if - that extension
+  is installed, the stos-control skill.
