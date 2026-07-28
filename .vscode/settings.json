@@ -1,0 +1,19 @@
+{
+  "// note": "src/*.bas is edited comfortably as UTF-8/LF; scripts/sync.sh is the single place that converts it to the Atari-correct form (plain ASCII, CR line endings, 8.3 upper-case .ASC).",
+  "files.associations": {
+    "*.bas": "vb"
+  },
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.formatOnSave": false,
+  "editor.lineNumbers": "on",
+  "editor.rulers": [80],
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "[vb]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "options": { "cwd": "${workspaceFolder}" },
+  "tasks": [
+    {
+      "label": "STOS: sync source",
+      "type": "shell",
+      "command": "./scripts/sync.sh",
+      "presentation": { "reveal": "silent", "focus": false, "panel": "shared" },
+      "problemMatcher": []
+    },
+    {
+      "label": "STOS: launch Hatari",
+      "type": "shell",
+      "command": "./scripts/hatari.sh",
+      "isBackground": true,
+      "presentation": { "reveal": "always", "focus": false, "panel": "dedicated" },
+      "problemMatcher": []
+    },
+    {
+      "label": "STOS: sync + launch",
+      "dependsOrder": "sequence",
+      "dependsOn": ["STOS: sync source", "STOS: launch Hatari"],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "STOS: rebuild disk + ROM (setup)",
+      "type": "shell",
+      "command": "./scripts/setup.sh",
+      "presentation": { "reveal": "always", "focus": false },
+      "problemMatcher": []
+    }
+  ]
+}
