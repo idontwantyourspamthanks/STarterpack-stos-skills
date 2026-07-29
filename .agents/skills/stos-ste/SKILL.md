@@ -49,4 +49,5 @@ extension and is NOT covered here.
   palette, dac, scrolling).
 - Source discrepancies and open questions: `reference/errata.md`.
 - Vanilla STOS commands: the stos-syntax skill. Other extensions:
-  stos-missing-link, stos-misty, stos-control, stos-blitter, stos-maestro.
+  stos-missing-link, stos-misty, stos-control, stos-blitter, stos-maestro,
+  stos-gbp.

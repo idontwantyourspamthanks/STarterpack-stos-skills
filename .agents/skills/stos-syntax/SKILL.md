@@ -78,6 +78,8 @@ use it instead of memory or outside knowledge.
   installed, see the stos-blitter skill.
 - The Maestro extension (sample playback, SAMPLAY/SAMRAW...): if - and
   only if - that extension is installed, see the stos-maestro skill.
+- The GBP extension (FASTWIPE, D CRUNCH, GBP file banks...): if - and only
+  if - that extension is installed, see the stos-gbp skill.
 
 ## Verified starter snippet
 

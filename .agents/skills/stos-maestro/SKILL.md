@@ -50,4 +50,5 @@ scanned manual (kept at `extensions/maestro/stos_maestro_manual.pdf`).
 - .SAM/.MBK file formats and the playback engine: `reference/formats.md`.
 - Source discrepancies: `reference/errata.md`.
 - Vanilla STOS commands: the stos-syntax skill. Other extensions:
-  stos-missing-link, stos-misty, stos-control, stos-ste, stos-blitter.
+  stos-missing-link, stos-misty, stos-control, stos-ste, stos-blitter,
+  stos-gbp.

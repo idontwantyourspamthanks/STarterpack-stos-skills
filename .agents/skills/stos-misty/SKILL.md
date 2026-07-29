@@ -48,4 +48,5 @@ bundled reference.
   if - and only if - the user is on an STE with it installed, the stos-ste
   skill. The Blitter extension: if - and only if - the machine has a
   blitter and it is installed, the stos-blitter skill. The Maestro
-  extension: if - and only if - it is installed, the stos-maestro skill.
+  extension: if - and only if - it is installed, the stos-maestro skill. The
+  GBP extension: if - and only if - it is installed, the stos-gbp skill.
