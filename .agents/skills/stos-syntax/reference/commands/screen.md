@@ -588,6 +588,11 @@ physic=back:rem Set physical screen to sprite background
 
 **See also:** PACK
 
+### Gotchas
+- The SCREEN COMPACTOR accessory (COMPACT.ACB) is menu-driven: it loads NEO/PI1/PI2/PI3 pictures, can pack a whole picture or a portion of it (with an optional erase-after-pack toggle), and saves the result as a MEMORY BANK (.MBK). Pack whole screens within programs with PACK; load and unpack banks with UNPACK.
+- The same two commands also ship as a standalone "Picture Compactor" extension (COMPACT.EXA / COMPACT.ECA; its boot banner is bilingual, "PICTURE COMPACTOR extension / Extension COMPACTEUR D'IMAGES") — loading it simply provides the vanilla PACK/UNPACK as an installable extension, so programs using them work identically either way.
+- Not to be confused with the unrelated SQUASHER extension by J.B.Briscombe (`squash`/`unsquash` on any bank, with its own SQUASH.ACB/UNSQUASH.ACB accessories).
+
 ## PACK
 `l=PACK(scr,bnk)` — Function to pack a screen.
 

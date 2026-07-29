@@ -50,3 +50,5 @@ bundled reference.
   blitter and it is installed, the stos-blitter skill. The Maestro
   extension: if - and only if - it is installed, the stos-maestro skill. The
   GBP extension: if - and only if - it is installed, the stos-gbp skill.
+  The STOS 3D extension: if - and only if - it is installed, the stos-3d
+  skill.

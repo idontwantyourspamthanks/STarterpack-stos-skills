@@ -80,6 +80,8 @@ use it instead of memory or outside knowledge.
   only if - that extension is installed, see the stos-maestro skill.
 - The GBP extension (FASTWIPE, D CRUNCH, GBP file banks...): if - and only
   if - that extension is installed, see the stos-gbp skill.
+- The STOS 3D extension (Td 3D worlds...): if - and only if - that
+  extension is installed, see the stos-3d skill.
 
 ## Verified starter snippet
 

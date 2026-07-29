@@ -48,4 +48,4 @@ and marked as such. The shareware V3.5a doc is kept at
 - Source discrepancies and doc typos: `reference/errata.md`.
 - Vanilla STOS commands: the stos-syntax skill. Other extensions:
   stos-missing-link, stos-misty, stos-ste, stos-blitter, stos-maestro,
-  stos-gbp.
+  stos-gbp, stos-3d.

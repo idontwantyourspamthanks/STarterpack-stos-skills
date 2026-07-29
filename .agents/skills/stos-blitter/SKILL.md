@@ -49,4 +49,4 @@ only. See `reference/errata.md`.
   REMAIN, the STORM-vs-NuBlitter split): `reference/errata.md`.
 - Vanilla STOS commands: the stos-syntax skill. Other extensions:
   stos-missing-link, stos-misty, stos-control, stos-ste, stos-maestro,
-  stos-gbp.
+  stos-gbp, stos-3d.

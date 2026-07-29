@@ -50,4 +50,4 @@ extension and is NOT covered here.
 - Source discrepancies and open questions: `reference/errata.md`.
 - Vanilla STOS commands: the stos-syntax skill. Other extensions:
   stos-missing-link, stos-misty, stos-control, stos-blitter, stos-maestro,
-  stos-gbp.
+  stos-gbp, stos-3d.

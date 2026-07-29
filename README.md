@@ -5,7 +5,7 @@ for the Atari ST. Edit plain-text `.bas` files in VS Code, press
 `Ctrl+Shift+B`, and your program boots into STOS in the Hatari emulator ready
 to `run`.
 
-It also ships nine AI-agent skills (in `.agents/skills/`) that give an AI
+It also ships ten AI-agent skills (in `.agents/skills/`) that give an AI
 assistant deep, verified knowledge of STOS Basic and the most popular
 extensions — handy whether or not you code with an AI.
 
@@ -13,7 +13,7 @@ extensions — handy whether or not you code with an AI.
 
 ```
 .vscode/          tasks: Ctrl+Shift+B = sync + launch
-.agents/skills/   stos-syntax, stos-workflow, stos-missing-link, stos-misty, stos-control, stos-ste, stos-blitter, stos-maestro, stos-gbp
+.agents/skills/   stos-syntax, stos-workflow, stos-missing-link, stos-misty, stos-control, stos-ste, stos-blitter, stos-maestro, stos-gbp, stos-3d
 scripts/          setup.sh, sync.sh, hatari.sh
 src/hello.bas     starter program
 examples/         a bigger example
@@ -146,6 +146,10 @@ If you use an AI coding assistant that discovers `.agents/skills/`:
   graphics, packer unpacking, GBP file banks, printer utilities, and STE
   sound/cookies. From the official shareware manual, verified against the
   V4.7 binary; gated the same way.
+- **stos-3d** — the STOS 3D extension (59 commands): real-time 3D worlds
+  with 20 objects plus a viewpoint, filled surfaces, zones, animation and
+  collision detection. From the official 110-page Voodoo manual; gated the
+  same way.
 
 The reference material in these skills was distilled from the STOS manual and
 the extensions' official documentation. Verbatim source documents are not
