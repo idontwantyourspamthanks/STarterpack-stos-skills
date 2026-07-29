@@ -5,7 +5,7 @@ for the Atari ST. Edit plain-text `.bas` files in VS Code, press
 `Ctrl+Shift+B`, and your program boots into STOS in the Hatari emulator ready
 to `run`.
 
-It also ships five AI-agent skills (in `.agents/skills/`) that give an AI
+It also ships seven AI-agent skills (in `.agents/skills/`) that give an AI
 assistant deep, verified knowledge of STOS Basic and the most popular
 extensions — handy whether or not you code with an AI.
 
@@ -13,7 +13,7 @@ extensions — handy whether or not you code with an AI.
 
 ```
 .vscode/          tasks: Ctrl+Shift+B = sync + launch
-.agents/skills/   stos-syntax, stos-workflow, stos-missing-link, stos-misty, stos-control
+.agents/skills/   stos-syntax, stos-workflow, stos-missing-link, stos-misty, stos-control, stos-ste, stos-blitter
 scripts/          setup.sh, sync.sh, hatari.sh
 src/hello.bas     starter program
 examples/         a bigger example
@@ -90,6 +90,32 @@ and `scripts/sync.sh` writes your converted programs there as `<NAME>.ASC`.
 
 More detail in `docs/setup-notes.md` and `docs/stos-cheatsheet.md`.
 
+## Useful links
+
+**Getting STOS and a TOS, legally**
+
+- [Clickteam](https://www.clickteam.com) — François Lionet's (the STOS
+  author's) company; hosts STOS materials including the STOS Basic 2.06 and
+  compiler source code.
+- [EmuTOS](https://emutos.sourceforge.net) — a free, open-source TOS
+  replacement that works with Hatari if you don't have a TOS ROM dump from
+  your own machine.
+
+**Community, docs and downloads**
+
+- [STOS Coders](https://stoscoders.com) — the hub: tutorials, downloads,
+  extensions, and Neil Halliday's write-ups.
+- [exxos STOS archive](https://www.exxosforum.co.uk/atari/STOS/EXTENSIONS/index.htm) —
+  the big extension archive (where the Missing Link, Misty and Control
+  packages in this pack's skills came from), plus docs and diskzines.
+- [Atari-Forum STOS section](https://www.atari-forum.com/viewforum.php?f=71) —
+  active community for help, source code and extension chat.
+- [AtariMania](https://www.atarimania.com) — scans of the STOS manual,
+  magazines and coverdisks.
+- [Into The Vertical Blank](https://intotheverticalblank.com) — modern STOS
+  tutorial series (Hatari setup, sprites, blitter).
+- [Hatari](https://hatari.tuxfamily.org) — the emulator itself.
+
 ## The AI skills
 
 If you use an AI coding assistant that discovers `.agents/skills/`:
@@ -105,6 +131,14 @@ If you use an AI coding assistant that discovers `.agents/skills/`:
 - **stos-control** — the Control extension (56 commands): the SWITCH/CASE
   construct, parallel/Jaguar pad input, megazones, pre-shifted graphics, and
   scrolling tile maps. From the official V3.6b manual, gated the same way.
+- **stos-ste** — the STE extension (35 commands): six joysticks, light gun,
+  4096-colour palette, DAC stereo sample sound, and single-pixel hardware
+  scrolling. From Asa Burrows' official manual; gated on STE hardware plus
+  the extension.
+- **stos-blitter** — the NuBlitter extension (27 commands): CPU-independent
+  block copies, clears, halftones and logical ops from the blitter chip.
+  Command inventory verified against the binary's own token table; gated on
+  blitter hardware plus the extension.
 
 The reference material in these skills was distilled from the STOS manual and
 the extensions' official documentation. Verbatim source documents are not

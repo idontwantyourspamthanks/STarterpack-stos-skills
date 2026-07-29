@@ -44,4 +44,7 @@ bundled reference.
 - Source discrepancies and manual typos: `reference/errata.md`.
 - Vanilla STOS commands: the stos-syntax skill. The Missing Link extension:
   the stos-missing-link skill. The Control extension: if - and only if -
-  that extension is installed, the stos-control skill.
+  that extension is installed, the stos-control skill. The STE extension:
+  if - and only if - the user is on an STE with it installed, the stos-ste
+  skill. The Blitter extension: if - and only if - the machine has a
+  blitter and it is installed, the stos-blitter skill.

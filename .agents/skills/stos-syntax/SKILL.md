@@ -70,6 +70,12 @@ use it instead of memory or outside knowledge.
 - The Control extension (SWITCH/CASE, IMAGE PUT, megazones, tile maps...):
   if - and only if - the user has that extension installed, see the
   stos-control skill.
+- The STE extension (DAC sound, hardware scrolling, six joysticks...): if -
+  and only if - the user is on an STE with that extension installed, see
+  the stos-ste skill.
+- The Blitter extension (blit copy/cls, CPU-independent block copies...): if
+  - and only if - the machine has a blitter and that extension is
+  installed, see the stos-blitter skill.
 
 ## Verified starter snippet
 

@@ -100,5 +100,6 @@ python3 tools/pi1-to-sprite.py art.pi1 -o sprites.mbk \
 
 `--cell-w` must be a multiple of 16 (the ST's strip width); `--mask` is the
 colour index treated as transparent (default 0). Run `--selftest` to confirm
-the binary format round-trips byte-identically against the sample banks. The
-on-disc layout is documented in `docs/stos-sprite-bank-format.md`.
+the binary format matches STOS's own output byte-for-byte (against the
+`tools/fixtures/GRAB.MBK` fixture STOS authored via GET SPRITE). The on-disc
+layout is documented in `docs/stos-sprite-bank-format.md`.
