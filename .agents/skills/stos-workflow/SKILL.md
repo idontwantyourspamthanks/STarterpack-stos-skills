@@ -58,3 +58,25 @@ changes minimal. Re-run `scripts/sync.sh` after every edit, then `NEW` /
 - `reference/sync.sh` - the converter (run from the repo, not from here)
 - `reference/hatari.sh` - the emulator launcher (same)
 - `reference/cheatsheet.md` - the full human cheatsheet with more detail
+
+## Extensions (installing them)
+
+STOS extensions live in slot letters A-Z (the last letter of the `.EX?` /
+`.EC?` filename); two extensions can never share a slot. To install one into
+the emulated C: drive, copy it into `dev/gemdos/STOS/` (interpreter `.EX?`)
+and `dev/gemdos/COMPILER/` (compiler `.EC?`). `scripts/install-extension.sh`
+does this for you:
+
+- `scripts/install-extension.sh` - list available extensions and their slots
+- `scripts/install-extension.sh NAME ...` - install specific extensions
+- `scripts/install-extension.sh --all` - install everything, skipping slot
+  conflicts with a warning
+
+Run it AFTER `scripts/setup.sh` (setup rebuilds `dev/gemdos` from scratch, so
+extensions must be reinstalled afterwards). At boot, STOS prints a banner for
+each extension it loaded - check the boot screen when something misbehaves.
+
+Known conflicts in this repo: `3D.EXS` (STOS 3D) and `LINK3.EXS` (Missing
+Link part 3) both want slot S - only one can be installed. And the recovered
+MISTY.EXM crashes the boot when Missing Link is also present (it boots alone;
+suspected truncated file, under investigation).

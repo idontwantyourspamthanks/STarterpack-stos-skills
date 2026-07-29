@@ -47,4 +47,4 @@ with the inventory verified against the V4.7 binary's token table.
   function/procedure conflict): `reference/errata.md`.
 - Vanilla STOS commands: the stos-syntax skill. Other extensions:
   stos-missing-link, stos-misty, stos-control, stos-ste, stos-blitter,
-  stos-maestro, stos-3d.
+  stos-maestro, stos-3d, stos-ninja.

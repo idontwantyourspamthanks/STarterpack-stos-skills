@@ -23,6 +23,11 @@ This is v1.7 (21 commands); a later 28-command version was advertised in 1993
 but no documentation for it survives - do not invent commands beyond the
 bundled reference.
 
+KNOWN ISSUE with this specific binary: it was recovered from a packed
+installer and boots fine alone, but crashes the boot when Missing Link is
+also installed (suspected truncated file). If the user hits this, use Misty
+without Missing Link or avoid installing both.
+
 ## Key concepts
 
 - All graphics commands assume LOW RESOLUTION (mode 0).
@@ -51,4 +56,5 @@ bundled reference.
   extension: if - and only if - it is installed, the stos-maestro skill. The
   GBP extension: if - and only if - it is installed, the stos-gbp skill.
   The STOS 3D extension: if - and only if - it is installed, the stos-3d
-  skill.
+  skill. The Ninja Tracker extension: if - and only if - the user is on
+  STE/TT/Falcon with it installed, the stos-ninja skill.

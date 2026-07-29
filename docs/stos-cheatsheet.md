@@ -62,6 +62,17 @@ and blank lines removed; line endings → CRLF (what STOS's own `SAVE "x.ASC"`
 writes; override with `STOS_EOL` only if a different STOS build disagrees).
 It **warns** (does not fail) on a line that has no leading line number.
 
+## Installing extensions
+Extensions live in slot letters A–Z (last letter of the `.EX?`/`.EC?` name) — two
+extensions can never share a slot. Install with `scripts/install-extension.sh`:
+bare = list available + slots, `NAME...` = install those, `--all` = install all
+(conflicts skipped with a warning). Interpreter files land in `dev/gemdos/STOS/`,
+compiler files in `dev/gemdos/COMPILER/`. **Run after `scripts/setup.sh`** — setup
+rebuilds `dev/gemdos`, wiping installed extensions. Boot banners confirm what loaded.
+
+Known conflicts: `3D.EXS` vs `LINK3.EXS` (both slot S). The recovered `MISTY.EXM`
+crashes the boot when Missing Link is present (fine alone; suspected truncated file).
+
 ## Verified snippet (verbatim from the manual)
 ```
 10 if mode=2 then stop

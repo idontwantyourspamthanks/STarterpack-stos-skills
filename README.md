@@ -5,7 +5,7 @@ for the Atari ST. Edit plain-text `.bas` files in VS Code, press
 `Ctrl+Shift+B`, and your program boots into STOS in the Hatari emulator ready
 to `run`.
 
-It also ships ten AI-agent skills (in `.agents/skills/`) that give an AI
+It also ships eleven AI-agent skills (in `.agents/skills/`) that give an AI
 assistant deep, verified knowledge of STOS Basic and the most popular
 extensions — handy whether or not you code with an AI.
 
@@ -13,7 +13,7 @@ extensions — handy whether or not you code with an AI.
 
 ```
 .vscode/          tasks: Ctrl+Shift+B = sync + launch
-.agents/skills/   stos-syntax, stos-workflow, stos-missing-link, stos-misty, stos-control, stos-ste, stos-blitter, stos-maestro, stos-gbp, stos-3d
+.agents/skills/   stos-syntax, stos-workflow, stos-missing-link, stos-misty, stos-control, stos-ste, stos-blitter, stos-maestro, stos-gbp, stos-3d, stos-ninja
 scripts/          setup.sh, sync.sh, hatari.sh
 src/hello.bas     starter program
 examples/         a bigger example
@@ -46,10 +46,14 @@ original disks, or the copies archived all over the Atari community):
    1.06, 1.62 and 2.06 also work). Override with `STOS_TOS_SRC=/path/to.rom`.
    Note the UK keyboard layout on these ROMs: `Shift+2` = `"`.
 
-3. **Extensions (optional)**: if you own Misty or The Missing Link, copy the
-   extension files into the emulated drive after setup — interpreter versions
-   (e.g. `MISTY.EXM`, `LINK1.EXQ`…) into `dev/gemdos/STOS/`, compiler versions
-   (e.g. `MISTY.ECM`, `LINK1.ECQ`…) into `dev/gemdos/COMPILER/`.
+3. **Extensions (optional)**: if you own extensions (Missing Link, Misty,
+   Control, GBP, Maestro, STOS 3D…), place them in an `extensions/` folder
+   (see below) and run `scripts/install-extension.sh` — it copies the right
+   files into the emulated drive, lists slot letters, and skips slot
+   conflicts. Layout: `extensions/<name>/Extensions/Stos/*.EX?` for
+   interpreter files and `extensions/<name>/Extensions/Compiler/*.EC?` for
+   compiler files. Run it after `scripts/setup.sh` (setup wipes the emulated
+   drive).
 
 ## Quickstart
 
@@ -150,6 +154,9 @@ If you use an AI coding assistant that discovers `.agents/skills/`:
   with 20 objects plus a viewpoint, filled surfaces, zones, animation and
   collision detection. From the official 110-page Voodoo manual; gated the
   same way.
+- **stos-ninja** — the Ninja Tracker extension (7 commands): background
+  ProTracker mod playback on STE/TT/Falcon. From the author's official
+  TRACKER.DOC; gated on hardware plus the extension.
 
 The reference material in these skills was distilled from the STOS manual and
 the extensions' official documentation. Verbatim source documents are not

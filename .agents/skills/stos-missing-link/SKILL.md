@@ -50,4 +50,6 @@ The extension ships in this repo: `extensions/misslink/Extensions/Stos/`
   installed, the stos-blitter skill. The Maestro extension: if - and only
   if - it is installed, the stos-maestro skill. The GBP extension: if -
   and only if - it is installed, the stos-gbp skill. The STOS 3D extension:
-  if - and only if - it is installed, the stos-3d skill.
+  if - and only if - it is installed, the stos-3d skill. The Ninja Tracker
+  extension: if - and only if - the user is on STE/TT/Falcon with it
+  installed, the stos-ninja skill.

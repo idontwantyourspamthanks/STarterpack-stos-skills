@@ -46,4 +46,4 @@ Modeller is at `extensions/stos-3d/OM.PRG`. Documented from the official
 - Source discrepancies and manual typos: `reference/errata.md`.
 - Vanilla STOS commands: the stos-syntax skill. Other extensions:
   stos-missing-link, stos-misty, stos-control, stos-ste, stos-blitter,
-  stos-maestro, stos-gbp.
+  stos-maestro, stos-gbp, stos-ninja.

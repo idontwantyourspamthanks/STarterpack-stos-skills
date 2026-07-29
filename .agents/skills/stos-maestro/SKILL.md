@@ -51,4 +51,4 @@ scanned manual (kept at `extensions/maestro/stos_maestro_manual.pdf`).
 - Source discrepancies: `reference/errata.md`.
 - Vanilla STOS commands: the stos-syntax skill. Other extensions:
   stos-missing-link, stos-misty, stos-control, stos-ste, stos-blitter,
-  stos-gbp, stos-3d.
+  stos-gbp, stos-3d, stos-ninja.

@@ -82,6 +82,9 @@ use it instead of memory or outside knowledge.
   if - that extension is installed, see the stos-gbp skill.
 - The STOS 3D extension (Td 3D worlds...): if - and only if - that
   extension is installed, see the stos-3d skill.
+- The Ninja Tracker extension (background ProTracker mods...): if - and
+  only if - the user is on STE/TT/Falcon with it installed, see the
+  stos-ninja skill.
 
 ## Verified starter snippet
 
