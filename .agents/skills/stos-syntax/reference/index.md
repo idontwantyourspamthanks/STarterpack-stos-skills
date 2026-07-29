@@ -5,7 +5,8 @@ A topic-organized reference for STOS Basic, extracted from the 1988 STOS Basic m
 ## Reference
 
 - [Compiler guide](compiler.md) — how to compile STOS programs to machine code.
-- [Errata](errata.md) — known manual errors and unverified readings.
+- [Errata](errata.md)
+- [Memory bank (.MBK) file format](topics/mbk-format.md) — known manual errors and unverified readings.
 
 ## Tutorial guides
 

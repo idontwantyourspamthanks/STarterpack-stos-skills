@@ -27,6 +27,10 @@ The extension ships in this repo: `extensions/misslink/Extensions/Stos/`
 - Image numbers start from 0: sprite 1 becomes bob 0 when converted.
 - BOB/tile banks and digibanks are produced by the MAKE utility - see
   `reference/make-utility.md`.
+- Keep parameters to extension commands SIMPLE: pre-compute into plain
+  variables. `bob logic,start(5),0,X,Y,0` works; the inline form
+  `bob logic,start(5),0,int(X)-8,int(Y)-8,0` fails with *Type mismatch*
+  (verified in this project).
 - Graphics commands can target back, physic, logic, or any memory bank -
   pass `start(bank)` for banks.
 - Some commands require the registered version; entries are marked

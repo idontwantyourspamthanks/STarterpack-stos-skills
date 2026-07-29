@@ -28,6 +28,7 @@ BOB is a replacement for SPRITE using pre-shifted sprites: much faster (about 25
 - All addresses must be actual: pass `start(5)`, not `5`, for memory banks.
 - Image numbers start from 0: when sprites are converted, sprite 1 becomes bob 0, sprite 2 becomes bob 1, etc.
 - Bob banks are produced from a STOS sprite bank with the MAKE utility; the more pre-shifted images you ask for, the smoother the movement but the larger the bank (8 images moves smoothly at 2-pixel steps).
+- Keep parameters simple: `bob logic,start(5),0,X,Y,0` works, but the inline form `bob logic,start(5),0,int(X)-8,int(Y)-8,0` fails with *Type mismatch* (verified in this project). Pre-compute coordinates into plain variables before calling BOB and other Missing Link commands.
 - The duplicate `20` in the official doc's example is a typo (the `repeat` line); renumbered here.
 
 **See also:** JOEY, B WIDTH, B HEIGHT, MANY BOB, make-utility.md

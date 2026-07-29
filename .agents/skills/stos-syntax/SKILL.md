@@ -57,6 +57,7 @@ use it instead of memory or outside knowledge.
 - Concepts and how-tos (sprites, music, screens, windows, memory banks, menus,
   the editor): read `reference/topics/<topic>.md`.
 - Compiling programs to run-only .PRG files: `reference/compiler.md`.
+- The .MBK memory bank file format (sprites, fonts, samples): `reference/topics/mbk-format.md`.
 - Sprites: the MOVE X entry in `reference/commands/sprites.md` documents
   move strings; a supplementary guide informed it (see `reference/SOURCE.md`).
 - Move strings for MOVE X/MOVE Y: (speed,step,count) tuples in brackets, L to
