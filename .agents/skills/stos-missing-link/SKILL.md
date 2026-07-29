@@ -47,4 +47,5 @@ The extension ships in this repo: `extensions/misslink/Extensions/Stos/`
   is installed, the stos-control skill. The STE extension: if - and only if
   - the user is on an STE with it installed, the stos-ste skill. The
   Blitter extension: if - and only if - the machine has a blitter and it is
-  installed, the stos-blitter skill.
+  installed, the stos-blitter skill. The Maestro extension: if - and only
+  if - it is installed, the stos-maestro skill.

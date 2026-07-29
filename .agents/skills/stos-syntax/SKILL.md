@@ -76,6 +76,8 @@ use it instead of memory or outside knowledge.
 - The Blitter extension (blit copy/cls, CPU-independent block copies...): if
   - and only if - the machine has a blitter and that extension is
   installed, see the stos-blitter skill.
+- The Maestro extension (sample playback, SAMPLAY/SAMRAW...): if - and
+  only if - that extension is installed, see the stos-maestro skill.
 
 ## Verified starter snippet
 
