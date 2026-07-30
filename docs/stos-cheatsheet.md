@@ -73,6 +73,44 @@ rebuilds `dev/gemdos`, wiping installed extensions. Boot banners confirm what lo
 Known conflicts: `3D.EXS` vs `LINK3.EXS` (both slot S). The recovered `MISTY.EXM`
 crashes the boot when Missing Link is present (fine alone; suspected truncated file).
 
+## Compiling a program
+The compiler is an accessory, `COMPILER.ACB` (setup.sh drops it on the C: root).
+The flow:
+
+```text
+new
+load "MYGAME.ASC"
+list                       <- VERIFY the program is in memory
+save "MYGAME.BAS"          <- compiler needs tokenized .BAS, NOT .ASC
+accnew : accload "compiler.acb"
+<HELP> -> COMPILER -> DEST BASIC -> COMPILE -> MYGAME.CMP
+accnew : load "mygame.cmp" : run
+```
+
+Gotchas, all of which have bitten us:
+
+- **".ASC is not compilable."** The compiler only eats tokenized `.BAS`. Sync
+  produces `.ASC`; `save "x.bas"` converts in one step.
+- **"Nothing to compile"** = you saved an empty program. STOS happily writes an
+  80-byte header-only `.BAS` when memory is empty (e.g. a `new` crept in after
+  the load). Always `list` first — if it scrolls, the save will be real (~4 KB+,
+  not 80 bytes).
+- **HELP is Print Screen**, which most Linux hosts capture. `dev/keymap.txt`
+  maps Scroll Lock to it (`SCROLLLOCK,98`); `hatari.sh` picks it up automatically.
+- **DEST BASIC vs GEM**: BASIC makes `.CMP` (runs inside STOS via
+  `accnew : load "x.cmp" : run`); GEM makes a standalone `.PRG` (desktop
+  double-click, no STOS needed, but +40-80k and unlistable).
+- **Extensions must be present at compile time in compiler form** (`.EC?` files
+  in `dev/gemdos/COMPILER/`) — `install-extension.sh` already placed them.
+  Interpreted-only extensions can't be compiled (e.g. Control's `track info`,
+  CTRL — the docs mark these).
+- **Compiler needs STOS >= 2.4** (we run 2.6).
+- **Line 65535 is special** — it runs the compiled code. Never edit it in a
+  compiled program.
+- Compilation takes a few minutes. The interpreted source can stay in memory
+  while you test the compiled version — fix, recompile in seconds.
+- Full theory in `docs/stos-manual/compiler.md` (the distilled user guide).
+
 ## Verified snippet (verbatim from the manual)
 ```
 10 if mode=2 then stop

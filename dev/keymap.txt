@@ -1,0 +1,3 @@
+# Hatari keymap: map PC Scroll Lock to the Atari ST Help key (scancode 98),
+# because the host OS captures Print Screen (and F11 toggles fullscreen).
+SCROLLLOCK,98

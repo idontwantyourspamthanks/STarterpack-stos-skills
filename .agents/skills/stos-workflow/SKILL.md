@@ -80,3 +80,25 @@ Known conflicts in this repo: `3D.EXS` (STOS 3D) and `LINK3.EXS` (Missing
 Link part 3) both want slot S - only one can be installed. And the recovered
 MISTY.EXM crashes the boot when Missing Link is also present (it boots alone;
 suspected truncated file, under investigation).
+
+## Compiling a program
+
+The compiler is the `COMPILER.ACB` accessory (setup.sh puts it on the C:
+root). Flow: `new`, `load "x.asc"`, `list` (verify the program is actually in
+memory), `save "x.bas"` (the compiler only eats tokenized .BAS - never .ASC),
+`accnew : accload "compiler.acb"`, open the COMPILER accessory from the HELP
+menu, DEST BASIC, COMPILE, then `accnew : load "x.cmp" : run`.
+
+Gotchas (all verified in this project):
+
+- "Nothing to compile" means the save happened with EMPTY memory - STOS
+  writes an 80-byte header-only .BAS without complaint. Always `list` before
+  saving.
+- HELP is Print Screen, which hosts capture; `dev/keymap.txt` maps Scroll
+  Lock to it and hatari.sh picks it up automatically.
+- DEST BASIC makes .CMP (runs inside STOS); DEST GEM makes a standalone .PRG
+  (+40-80k, unlistable).
+- Compiled programs using extensions need the compiler-form `.EC?` files in
+  `dev/gemdos/COMPILER/` (install-extension.sh handles it).
+- Full theory in the `reference/` of the stos-syntax skill
+  (`compiler.md`).

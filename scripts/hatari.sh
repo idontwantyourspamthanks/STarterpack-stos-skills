@@ -16,6 +16,10 @@ ROM=${STOS_TOS:-dev/roms/tos.img}
 MACHINE=${STOS_MACHINE:-st}      # use ste if you need STE sound/graphics
 MEM=${STOS_MEM:-1}               # MiB; bump to 2-4 for big programs
 
+# optional keymap (e.g. F11 -> Atari Help, since hosts grab Print Screen)
+KEYMAP_ARGS=()
+[ -f dev/keymap.txt ] && KEYMAP_ARGS=(--keymap dev/keymap.txt)
+
 if [[ ! -f "$ROM" ]]; then
   echo "hatari.sh: TOS ROM not found at $ROM (run scripts/setup.sh)" >&2
   exit 1
@@ -25,6 +29,7 @@ exec "$HATARI" \
   --machine "$MACHINE" \
   --tos "$ROM" \
   --memsize "$MEM" \
+  "${KEYMAP_ARGS[@]}" \
   --monitor rgb `# STOS needs a colour monitor; the host's global hatari.cfg may say mono, which makes MODE 0 fail with "Resolution not allowed"` \
   --fast-boot true \
   --harddrive "$PWD/dev/gemdos" \

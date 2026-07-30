@@ -57,6 +57,9 @@ use it instead of memory or outside knowledge.
 - Concepts and how-tos (sprites, music, screens, windows, memory banks, menus,
   the editor): read `reference/topics/<topic>.md`.
 - Compiling programs to run-only .PRG files: `reference/compiler.md`.
+- Making games FAST: read `reference/topics/performance.md` before
+  optimising (compile, bigger commands, bobs, incremental redraw, blitter,
+  interrupt music, integer math, small wins).
 - The .MBK memory bank file format (sprites, fonts, samples): `reference/topics/mbk-format.md`.
 - Sprites: the MOVE X entry in `reference/commands/sprites.md` documents
   move strings; a supplementary guide informed it (see `reference/SOURCE.md`).

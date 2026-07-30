@@ -30,6 +30,8 @@ cp -f  "$RAW/BASIC208.TOS" dev/gemdos/
 cp -rf "$RAW/STOS"         dev/gemdos/STOS
 cp -rf "$RAW/ACB"          dev/gemdos/ACB
 cp -rf "$RAW/COMPILER"     dev/gemdos/COMPILER
+# put the compiler accessory on the C: root for easy accload (setup.sh rebuilds wipe it otherwise)
+cp -f  "$RAW/ACB/COMPILER.ACB" dev/gemdos/ 2>/dev/null || true
 # keep the compiler-auto-loading autoexec around, but disabled (STOS only
 # auto-runs a file named exactly AUTOEXEC.BAS)
 cp -f  "$RAW/AUTOEXEC.BAS" dev/gemdos/_AUTOEXEC_COMPILER.BAS
